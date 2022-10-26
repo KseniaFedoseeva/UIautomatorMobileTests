@@ -4,6 +4,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
 import androidx.test.uiautomator.By
+import androidx.test.uiautomator.BySelector
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject
 import androidx.test.uiautomator.UiObject2
@@ -38,12 +39,12 @@ open class ExampleInstrumentedTest : BaseTest() {
         settings.click()
         Thread.sleep(500)
         device.pressBack()
-//        device.swipe(1033, 1346, 531, 1346, 20)
-//        var tools: UiObject = device.findObject(
-//            UiSelector().resourceIdMatches("com.huawei.android.launcher")
-//        ).getChild(
-//            (UiSelector().description("Tools"))
-//        )
+        device.swipe(1033, 1346, 531, 1346, 20)
+        val tools: UiObject2 = device.findObject(By.desc("Folder Tools"))
+        tools.click()
+
+
+
 //        Thread.sleep(500)
 //        tools.click()
     }
