@@ -2,20 +2,17 @@ package com.example.myapplication
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
-import androidx.test.uiautomator.By
-import androidx.test.uiautomator.BySelector
-import androidx.test.uiautomator.UiDevice
-import androidx.test.uiautomator.UiObject
 import androidx.test.uiautomator.UiObject2
-import androidx.test.uiautomator.UiSelector
-import androidx.test.uiautomator.Until.findObject
+import com.example.myapplication.pages.Desks
+import com.example.myapplication.pages.HomePage
+import com.example.myapplication.pages.Move
+import com.example.myapplication.pages.Settings
+import org.junit.Assert
 
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import org.junit.Assert.*
-import java.lang.Thread.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -34,13 +31,16 @@ open class ExampleInstrumentedTest : BaseTest() {
     @Test
     fun openSettings() {
 
-        var settings = device.findObject(By.text("Settings"))
+        var settings = device.findObject(Settings.settings)
         Thread.sleep(500)
         settings.click()
         Thread.sleep(500)
+        Assert.assertTrue("Нет заголовка Settings", device.hasObject(Settings.settings))
         device.pressBack()
-        device.swipe(1033, 1346, 531, 1346, 20)
-        val tools: UiObject2 = device.findObject(By.desc("Folder Tools"))
+        Assert.assertTrue("На экране нет часов", device.hasObject(HomePage.clock))
+
+
+        val tools: UiObject2 = device.findObject(Desks.tools)
         tools.click()
 
 
@@ -50,9 +50,15 @@ open class ExampleInstrumentedTest : BaseTest() {
     }
 
     @Test
-    fun swipes() {
-        //swipe right
-        device.swipe(1033, 1346, 531, 1346, 20)
+    fun openTools() {
+        val tools: UiObject2 = device.findObject(Desks.tools)
+
+        while (!device.hasObject(Desks.tools)){
+
+        }
+        tools.click()
 
     }
+
+
 }
