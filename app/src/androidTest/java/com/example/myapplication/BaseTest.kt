@@ -10,7 +10,6 @@ abstract class BaseTest () {
     lateinit var device: UiDevice
 
 
-
     @Before
     fun goHomePage() {
         device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())

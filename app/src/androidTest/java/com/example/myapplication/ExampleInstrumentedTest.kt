@@ -51,11 +51,12 @@ open class ExampleInstrumentedTest : BaseTest() {
 
     @Test
     fun openTools() {
-        val tools: UiObject2 = device.findObject(Desks.tools)
 
         while (!device.hasObject(Desks.tools)){
+            Move().rightSwipe()
 
         }
+        val tools: UiObject2 = device.findObject(Desks.tools)
         tools.click()
 
     }
