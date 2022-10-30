@@ -15,4 +15,5 @@ open class Move  {
     fun leftSwipe() {
         device.swipe( 531, 1346, 1033, 1346,20)
     }
+
 }

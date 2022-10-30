@@ -8,14 +8,11 @@ import androidx.test.uiautomator.UiDevice
 object Settings {
 
     val settings = By.text("Settings")
-
 }
 
 object HomePage{
     val clock : BySelector = By.res("com.huawei.android.totemweather:id/widget_time_hour")
 }
-
-
 
 object Desks {
     val tools = By.desc("Folder Tools")

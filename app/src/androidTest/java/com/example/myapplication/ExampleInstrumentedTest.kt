@@ -61,5 +61,11 @@ open class ExampleInstrumentedTest : BaseTest() {
 
     }
 
+    @Test
+    fun turnOffSound() {
+
+        device.openNotification()
+    }
+
 
 }
