@@ -3,10 +3,8 @@ package com.example.myapplication
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.UiObject2
-import com.example.myapplication.pages.Desks
-import com.example.myapplication.pages.HomePage
-import com.example.myapplication.pages.Move
-import com.example.myapplication.pages.Settings
+import androidx.test.uiautomator.Until
+import com.example.myapplication.pages.*
 import org.junit.Assert
 
 import org.junit.Test
@@ -42,12 +40,7 @@ open class ExampleInstrumentedTest : BaseTest() {
 
         val tools: UiObject2 = device.findObject(Desks.tools)
         tools.click()
-
-
-
-//        Thread.sleep(500)
-//        tools.click()
-    }
+   }
 
     @Test
     fun openTools() {
@@ -63,9 +56,18 @@ open class ExampleInstrumentedTest : BaseTest() {
 
     @Test
     fun turnOffSound() {
-
         device.openNotification()
+        device.wait(Until.findObject(Notification.sound), 500)
+        val sound: UiObject2 = device.findObject(Notification.sound)
+        sound.click()
+        sound.wait(Until.findObject(Notification.vibration), 500)
+        val vibration : UiObject2 = device.findObject(Notification.vibration)
+        vibration.click()
+        vibration.wait(Until.findObject(Notification.silent), 500)
+        val silent : UiObject2 = device.findObject(Notification.silent)
+        Assert.assertTrue("Не отключен звук", device.hasObject(Notification.silent))
+        silent.click()
+        }
+
     }
 
-
-}

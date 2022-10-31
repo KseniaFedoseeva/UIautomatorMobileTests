@@ -17,3 +17,9 @@ object HomePage{
 object Desks {
     val tools = By.desc("Folder Tools")
 }
+
+object Notification {
+    val sound = By.desc("Sound")
+    val silent = By.desc("Silent")
+    val vibration = By.desc("Vibration")
+}

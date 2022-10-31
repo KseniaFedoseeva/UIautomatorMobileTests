@@ -2,7 +2,9 @@ package com.example.myapplication
 
 import androidx.appcompat.widget.AppCompatDrawableManager.get
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.uiautomator.SearchCondition
 import androidx.test.uiautomator.UiDevice
+import androidx.test.uiautomator.UiObject2
 
 
 object ButtonDevice {
@@ -15,6 +17,12 @@ object ButtonDevice {
         Thread.sleep(timeout)
 
     }
+
+    fun clickAndWait (search : SearchCondition<UiObject2>) {
+
+    }
+
+
 
 
 }

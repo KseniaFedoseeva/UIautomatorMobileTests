@@ -4,7 +4,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import com.example.myapplication.BaseTest
 
-open class Move  {
+open class Move {
 
     val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
 
