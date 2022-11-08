@@ -36,8 +36,6 @@ open class ExampleInstrumentedTest : BaseTest() {
         Assert.assertTrue("Нет заголовка Settings", device.hasObject(Settings.settings))
         device.pressBack()
         Assert.assertTrue("На экране нет часов", device.hasObject(HomePage.clock))
-
-
         val tools: UiObject2 = device.findObject(Desks.tools)
         tools.click()
    }
@@ -54,6 +52,7 @@ open class ExampleInstrumentedTest : BaseTest() {
 
     }
 
+
     @Test
     fun turnOffSound() {
         device.openNotification()
@@ -68,6 +67,21 @@ open class ExampleInstrumentedTest : BaseTest() {
         Assert.assertTrue("Не отключен звук", device.hasObject(Notification.silent))
         silent.click()
         }
+
+    @Test
+    fun openWatch() {
+        Watch().clickWiget()
+        Thread.sleep(1000)
+        Assert.assertTrue("Часы не открылись", device.hasObject(WacthWiget.alarm))
+    }
+
+    @Test
+    fun openWeather() {
+        Weather().clickWiget()
+        Thread.sleep(1000)
+        Assert.assertTrue("Виджет погоды не открылся", device.hasObject(WeatherWiget.updateWeather))
+    }
+
 
     }
 

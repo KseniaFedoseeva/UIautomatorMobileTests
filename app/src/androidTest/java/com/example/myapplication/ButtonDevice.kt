@@ -18,9 +18,7 @@ object ButtonDevice {
 
     }
 
-    fun clickAndWait (search : SearchCondition<UiObject2>) {
 
-    }
 
 
 

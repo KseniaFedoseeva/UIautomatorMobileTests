@@ -1,9 +1,7 @@
 package com.example.myapplication.pages
 
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.BySelector
-import androidx.test.uiautomator.UiDevice
 
 object Settings {
 
@@ -12,6 +10,7 @@ object Settings {
 
 object HomePage{
     val clock : BySelector = By.res("com.huawei.android.totemweather:id/widget_time_hour")
+    val weather: BySelector = By.res("com.huawei.android.totemweather:id/widget_highlow_temperature")
 }
 
 object Desks {
@@ -23,3 +22,12 @@ object Notification {
     val silent = By.desc("Silent")
     val vibration = By.desc("Vibration")
 }
+
+object WeatherWiget {
+    val updateWeather = By.textContains("Last updated")
+}
+
+object WacthWiget {
+    val alarm = By.textContains("Alarm")
+}
+
