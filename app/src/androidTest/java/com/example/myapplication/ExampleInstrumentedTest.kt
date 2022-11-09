@@ -71,14 +71,12 @@ open class ExampleInstrumentedTest : BaseTest() {
     @Test
     fun openWatch() {
         Watch().clickWiget()
-        Thread.sleep(1000)
         Assert.assertTrue("Часы не открылись", device.hasObject(WacthWiget.alarm))
     }
 
     @Test
     fun openWeather() {
         Weather().clickWiget()
-        Thread.sleep(1000)
         Assert.assertTrue("Виджет погоды не открылся", device.hasObject(WeatherWiget.updateWeather))
     }
 

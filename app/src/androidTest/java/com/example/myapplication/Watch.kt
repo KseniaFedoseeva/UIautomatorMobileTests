@@ -12,6 +12,10 @@ class Watch : BaseMobile{
     override fun clickWiget() {
         val watch = device.findObject(HomePage.clock)
         watch.click()
+        Thread.sleep(1000)
+        if(device.hasObject(HomePage.clock)){
+            throw RuntimeException("Виджет не открылся")
+        }
     }
 
 }
