@@ -46,7 +46,13 @@ open class ExampleInstrumentedTest : BaseTest() {
         while (!device.hasObject(Desks.tools)){
             Move().rightSwipe()
 
+
         }
+        //if
+//        while (!device.hasObject(Desks.tools)){
+//            Move().leftSwipe()
+//        }
+
         val tools: UiObject2 = device.findObject(Desks.tools)
         tools.click()
 
@@ -80,6 +86,7 @@ open class ExampleInstrumentedTest : BaseTest() {
         Assert.assertTrue("Виджет погоды не открылся", device.hasObject(WeatherWiget.updateWeather))
     }
 
-
+    //зайти в настройки, создать лист (мэп), коллекции, проверить наличие, проскролить, количество элементов, сравнить каждый элемент на верное название, ткнуть в Apps, найти погоду
+    
     }
 
