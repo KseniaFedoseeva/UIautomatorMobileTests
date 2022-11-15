@@ -2,8 +2,7 @@ package com.example.myapplication
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.uiautomator.UiObject2
-import androidx.test.uiautomator.Until
+import androidx.test.uiautomator.*
 import com.example.myapplication.pages.*
 import org.junit.Assert
 
@@ -86,7 +85,20 @@ open class ExampleInstrumentedTest : BaseTest() {
         Assert.assertTrue("Виджет погоды не открылся", device.hasObject(WeatherWiget.updateWeather))
     }
 
-    //зайти в настройки, создать лист (мэп), коллекции, проверить наличие, проскролить, количество элементов, сравнить каждый элемент на верное название, ткнуть в Apps, найти погоду
-    
+    @Test
+    fun searchWeatherInApp() {
+        device.openNotification()
+        device.findObject(Settings.settingsButton).click()
+        Thread.sleep(1000)
+        device.findObject(Settings.apps).click()
+        Thread.sleep(1000)
+        device.findObject(By.res("android:id/title")).findObject(Settings.apps).click()
+        Thread.sleep(500)
+        while (!device.hasObject(Settings.weatherApp)) {
+            val s = UiSelector().resourceId("android:id/list")
+            UiScrollable(s).scrollForward()
+        }
+        device.findObject(Settings.weatherApp).click()
+    }
     }
 
