@@ -6,15 +6,12 @@ import androidx.test.uiautomator.BySelector
 object Settings {
 
     val settings = By.text("Settings")
-}
+    val settingsButton = By.res("com.android.systemui:id/settings_button")
+    val app = By.pkg("com.android.settings")
+    val apps = By.text("Apps")
+    val weatherApp = By.text("Weather")
+    val listOfApps = By.res("android:id/list")
 
-object HomePage{
-    val clock : BySelector = By.res("com.huawei.android.totemweather:id/widget_time_hour")
-    val weather: BySelector = By.res("com.huawei.android.totemweather:id/widget_highlow_temperature")
-}
-
-object Desks {
-    val tools = By.desc("Folder Tools")
 }
 
 object Notification {
@@ -23,11 +20,7 @@ object Notification {
     val vibration = By.desc("Vibration")
 }
 
-object WeatherWiget {
-    val updateWeather = By.textContains("Last updated")
-}
 
-object WacthWiget {
-    val alarm = By.textContains("Alarm")
-}
+
+
 
