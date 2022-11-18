@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.mobiletests.screens
 
 import java.lang.Exception
 

@@ -1,9 +1,10 @@
-package com.example.myapplication
+package com.example.mobiletests
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.*
-import com.example.myapplication.pages.*
+import com.example.mobiletests.pages.*
+import com.example.mobiletests.tests.BaseTest
 import org.junit.Assert
 
 import org.junit.Test
@@ -74,7 +75,7 @@ open class ExampleInstrumentedTest : BaseTest() {
         }
 
     @Test
-    fun openWatch() {
+    fun open_Watch() {
         Watch().clickWiget()
         Assert.assertTrue("Часы не открылись", device.hasObject(WacthWiget.alarm))
     }
@@ -95,8 +96,8 @@ open class ExampleInstrumentedTest : BaseTest() {
         device.findObject(By.res("android:id/title")).findObject(Settings.apps).click()
         Thread.sleep(500)
         while (!device.hasObject(Settings.weatherApp)) {
-            val s = UiSelector().resourceId("android:id/list")
-            UiScrollable(s).scrollForward()
+            val listApp = UiSelector().resourceId("android:id/list")
+            UiScrollable(listApp).scrollForward()
         }
         device.findObject(Settings.weatherApp).click()
     }

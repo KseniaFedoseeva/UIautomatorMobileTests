@@ -1,8 +1,7 @@
-package com.example.myapplication.pages
+package com.example.mobiletests.pages
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-import com.example.myapplication.BaseTest
 
 open class Move {
 

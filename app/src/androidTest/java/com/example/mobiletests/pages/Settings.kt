@@ -1,7 +1,6 @@
-package com.example.myapplication.pages
+package com.example.mobiletests.pages
 
 import androidx.test.uiautomator.By
-import androidx.test.uiautomator.BySelector
 
 object Settings {
 
