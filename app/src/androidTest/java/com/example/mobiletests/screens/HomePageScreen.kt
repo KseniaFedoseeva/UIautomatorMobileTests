@@ -19,6 +19,9 @@ open class HomePageScreen: BaseScreen(), BaseMobile {
     fun wigetWatch() : UiObject2 {
        return rootElement().findObject(clock)
 
+    }
 
+    fun wigetWeather() : UiObject2 {
+        return rootElement().findObject(weather)
     }
 }
