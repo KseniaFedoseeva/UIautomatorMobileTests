@@ -24,4 +24,8 @@ open class HomePageScreen: BaseScreen(), BaseMobile {
     fun wigetWeather() : UiObject2 {
         return rootElement().findObject(weather)
     }
+
+    fun openNotification() {
+        device.openNotification()
+    }
 }

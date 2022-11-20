@@ -2,7 +2,7 @@ package com.example.mobiletests.tests
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-import com.example.mobiletests.ButtonDevice
+import com.example.mobiletests.util.ButtonDevice
 import com.example.mobiletests.pages.HomePage
 import org.junit.Assert
 import org.junit.Before
