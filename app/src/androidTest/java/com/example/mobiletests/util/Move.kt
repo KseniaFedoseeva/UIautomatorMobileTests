@@ -1,4 +1,4 @@
-package com.example.mobiletests.pages
+package com.example.mobiletests.util
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice

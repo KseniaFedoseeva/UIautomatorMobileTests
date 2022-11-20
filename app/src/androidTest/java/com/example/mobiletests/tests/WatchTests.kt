@@ -1,8 +1,6 @@
 package com.example.mobiletests.tests
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.mobiletests.Watch
-import com.example.mobiletests.pages.WacthWiget
 import com.example.mobiletests.screens.HomePageScreen
 import com.example.mobiletests.screens.WatchScreen
 import org.junit.Assert

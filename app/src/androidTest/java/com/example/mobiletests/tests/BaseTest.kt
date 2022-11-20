@@ -3,7 +3,7 @@ package com.example.mobiletests.tests
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import com.example.mobiletests.util.ButtonDevice
-import com.example.mobiletests.pages.HomePage
+import com.example.mobiletests.screens.HomePageScreen
 import org.junit.Assert
 import org.junit.Before
 
@@ -15,8 +15,8 @@ abstract class BaseTest() {
 
         do {
             ButtonDevice.pressHome()
-        } while (!device.hasObject(HomePage.clock))
-        Assert.assertTrue("На экране нет часов", device.hasObject(HomePage.clock))
+        } while (!device.hasObject(HomePageScreen().clock))
+        Assert.assertTrue("На экране нет часов", HomePageScreen().searchWigetWathc())
     }
 
 
