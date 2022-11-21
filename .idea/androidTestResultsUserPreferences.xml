@@ -33,6 +33,20 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="-604008335">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="9WV4C18831028804" value="120" />
+                  <entry key="Duration" value="90" />
+                  <entry key="HUAWEI&#10; ANE-LX1" value="120" />
+                  <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="-543408400">
           <value>
             <AndroidTestResultsTableState>
@@ -43,6 +57,20 @@
                   <entry key="HUAWEI" value="120" />
                   <entry key="HUAWEI&#10; ANE-LX1" value="120" />
                   <entry key="Nexus_5_API_27" value="120" />
+                  <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-246786660">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="9WV4C18831028804" value="120" />
+                  <entry key="Duration" value="90" />
+                  <entry key="HUAWEI&#10; ANE-LX1" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
@@ -72,6 +100,20 @@
                   <entry key="Duration" value="90" />
                   <entry key="HUAWEI&#10; ANE-LX1" value="120" />
                   <entry key="Nexus_5_API_27" value="120" />
+                  <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-18713373">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="9WV4C18831028804" value="120" />
+                  <entry key="Duration" value="90" />
+                  <entry key="HUAWEI&#10; ANE-LX1" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
