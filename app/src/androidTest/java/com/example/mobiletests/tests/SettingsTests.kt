@@ -14,21 +14,23 @@ class SettingsTests : BaseTest() {
 
     @Test
     fun searchWeatherInApp() {
-        HomePageScreen().openNotification()
-        SettingsScreen().settingsButton().click()
+        homePageScreen.openNotification()
+        settingsScreen.settingsButton().click()
         Thread.sleep(1000)
-        SettingsScreen().searchAppsInSettings().click()
+        settingsScreen.searchAppsInSettings().click()
         Thread.sleep(1000)
-        AppsScreen().apps().click()
+        appsScreen.apps().click()
+
+
 
         Thread.sleep(1000)
 
-        while (!AppsScreen().searchWeatherApp()){
+        while (!appsScreen.searchWeatherApp()){
             val listApp = UiSelector().resourceId("android:id/list")
             UiScrollable(listApp).scrollForward()
         }
 
-        AppsScreen().weatherApp().click()
+        appsScreen.weatherApp().click()
 
 
     }

@@ -13,9 +13,9 @@ class WeatherTest : BaseTest() {
 
     @Test
     fun openWeather() {
-        HomePageScreen().wigetWeather().click()
+        homePageScreen.wigetWeather().click()
         Thread.sleep(2000)
-        Assert.assertTrue("Не открыта погода", WeatherScreen().rootElement().hasObject(WeatherScreen().updateWeather))
+        Assert.assertTrue("Не открыта погода", weatherScreen.rootElement().hasObject(weatherScreen.updateWeather))
 
     }
 }

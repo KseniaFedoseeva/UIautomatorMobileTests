@@ -8,6 +8,7 @@ import com.example.mobiletests.util.DeviceUtil
 abstract class BaseScreen {
     protected val device: UiDevice = DeviceUtil.device
 
+
     abstract fun rootElement() : UiObject2
 
 }
