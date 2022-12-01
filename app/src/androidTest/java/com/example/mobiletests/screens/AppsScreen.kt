@@ -2,6 +2,7 @@ package com.example.mobiletests.screens
 
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiObject2
+import androidx.test.uiautomator.Until
 
 open class AppsScreen : BaseScreen() {
 
@@ -17,6 +18,10 @@ open class AppsScreen : BaseScreen() {
 
     fun rootElementApp(): UiObject2 {
         return device.findObject(rootApp)
+    }
+
+    fun waitAllApps() : UiObject2 {
+        return device.wait(Until.findObject(By.text("All apps")), 1000);
     }
 
     fun apps(): UiObject2 {

@@ -1,8 +1,11 @@
 package com.example.mobiletests.tests
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.uiautomator.By
+import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.UiScrollable
 import androidx.test.uiautomator.UiSelector
+import androidx.test.uiautomator.Until
 import com.example.mobiletests.screens.AppsScreen
 import com.example.mobiletests.screens.HomePageScreen
 import com.example.mobiletests.screens.SettingsScreen
@@ -15,16 +18,10 @@ class SettingsTests : BaseTest() {
     @Test
     fun searchWeatherInApp() {
         homePageScreen.openNotification()
-        settingsScreen.settingsButton().click()
-        Thread.sleep(1000)
-        settingsScreen.searchAppsInSettings().click()
-        Thread.sleep(1000)
+        settingsScreen.settingsButton().clickAndWait(Until.newWindow(), 1000)
+        settingsScreen.searchAppsInSettings().clickAndWait(Until.newWindow(), 1000)
         appsScreen.apps().click()
-
-
-
-        Thread.sleep(1000)
-
+        appsScreen.waitAllApps()
         while (!appsScreen.searchWeatherApp()){
             val listApp = UiSelector().resourceId("android:id/list")
             UiScrollable(listApp).scrollForward()
