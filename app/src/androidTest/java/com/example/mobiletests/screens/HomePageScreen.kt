@@ -5,7 +5,7 @@ import androidx.test.uiautomator.BySelector
 import androidx.test.uiautomator.UiObject2
 
 
-open class HomePageScreen: BaseScreen(), BaseMobile {
+open class HomePageScreen: BaseScreen() {
 
     protected val root = By.clazz("android.view.ViewGroup")
     val search = By.desc("Chrome search")

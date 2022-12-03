@@ -19,7 +19,6 @@ class SettingsTests : BaseTest() {
     @Test
     fun searchWeatherInApp() {
 
-
             homePageScreen.openNotification()
             settingsScreen.settingsButton().clickAndWait(Until.newWindow(), 2000)
             settingsScreen.searchAppsInSettings().clickAndWait(Until.newWindow(), 2000)
