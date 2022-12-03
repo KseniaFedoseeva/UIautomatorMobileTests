@@ -21,7 +21,7 @@ open class AppsScreen : BaseScreen() {
     }
 
     fun waitAllApps() : UiObject2 {
-        return device.wait(Until.findObject(By.text("All apps")), 1000);
+        return device.wait(Until.findObject(By.text("All apps")), 3000);
     }
 
     fun apps(): UiObject2 {

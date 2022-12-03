@@ -50,5 +50,21 @@ dependencies {
     androidTestImplementation "androidx.test.uiautomator:uiautomator:2.2.0"
 
 
+
+
+    // to show allure results in android studio
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
+    androidTestImplementation 'com.android.support:support-annotations:28.0.0'
+
+    //Allure
+    androidTestImplementation 'io.qameta.allure:allure-kotlin-model:2.4.0'
+    androidTestImplementation 'io.qameta.allure:allure-kotlin-commons:2.4.0'
+    androidTestImplementation 'io.qameta.allure:allure-kotlin-junit4:2.4.0'
+    androidTestImplementation 'io.qameta.allure:allure-kotlin-android:2.4.0'
+
+
+
 }
 

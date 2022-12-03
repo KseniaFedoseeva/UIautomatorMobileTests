@@ -9,6 +9,7 @@ import androidx.test.uiautomator.Until
 import com.example.mobiletests.screens.AppsScreen
 import com.example.mobiletests.screens.HomePageScreen
 import com.example.mobiletests.screens.SettingsScreen
+import io.qameta.allure.Allure
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -17,19 +18,22 @@ class SettingsTests : BaseTest() {
 
     @Test
     fun searchWeatherInApp() {
-        homePageScreen.openNotification()
-        settingsScreen.settingsButton().clickAndWait(Until.newWindow(), 1000)
-        settingsScreen.searchAppsInSettings().clickAndWait(Until.newWindow(), 1000)
-        appsScreen.apps().click()
-        appsScreen.waitAllApps()
-        while (!appsScreen.searchWeatherApp()){
-            val listApp = UiSelector().resourceId("android:id/list")
-            UiScrollable(listApp).scrollForward()
+
+
+            homePageScreen.openNotification()
+            settingsScreen.settingsButton().clickAndWait(Until.newWindow(), 2000)
+            settingsScreen.searchAppsInSettings().clickAndWait(Until.newWindow(), 2000)
+            appsScreen.apps().click()
+            appsScreen.waitAllApps()
+            while (!appsScreen.searchWeatherApp()) {
+                val listApp = UiSelector().resourceId("android:id/list")
+                UiScrollable(listApp).scrollForward()
+            }
+
+            appsScreen.weatherApp().click()
+
+
         }
 
-        appsScreen.weatherApp().click()
-
-
-    }
 
 }
