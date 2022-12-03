@@ -1,6 +1,7 @@
 package com.example.mobiletests.tests
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.uiautomator.Until
 import com.example.mobiletests.screens.HomePageScreen
 import com.example.mobiletests.screens.WatchScreen
 import org.junit.Assert
@@ -11,8 +12,7 @@ import org.junit.runner.RunWith
 class WatchTests : BaseTest() {
     @Test
     fun openWatch() {
-        homePageScreen.wigetWatch().click()
-        Thread.sleep(1000)
+        homePageScreen.wigetWatch().clickAndWait(Until.newWindow(), 1000)
         Assert.assertTrue("Не открыты часы", watchScreen.rootElement().hasObject(watchScreen.alarm))
 
     }
