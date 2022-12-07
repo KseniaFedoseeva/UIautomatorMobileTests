@@ -14,6 +14,8 @@ abstract class BaseTest() {
     val watchScreen: WatchScreen by lazy { WatchScreen() }
     val weatherScreen: WeatherScreen by lazy { WeatherScreen() }
     val homePageScreen: HomePageScreen by lazy { HomePageScreen() }
+    val googleScreen: GoogleScreen by lazy {GoogleScreen()}
+    val photoGoogleScreen: PhotoGoogleScreen by lazy { PhotoGoogleScreen() }
 
     @Before
     fun goHomePage() {

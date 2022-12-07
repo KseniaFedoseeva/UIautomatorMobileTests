@@ -12,6 +12,8 @@ open class HomePageScreen: BaseScreen() {
     val tools = By.desc("Folder Tools")
     val clock : BySelector = By.res("com.huawei.android.totemweather:id/widget_time_hour")
     val weather: BySelector = By.res("com.huawei.android.totemweather:id/widget_highlow_temperature")
+    val googleFolder: BySelector = By.desc("Folder Google")
+    val google: BySelector = By.text("Google")
 
     override fun rootElement(): UiObject2 {
         return device.findObject(root)
@@ -28,6 +30,10 @@ open class HomePageScreen: BaseScreen() {
 
     fun wigetWeather() : UiObject2 {
         return rootElement().findObject(weather)
+    }
+
+    fun directoryGoogle(): UiObject2{
+        return rootElement().findObject(googleFolder)
     }
 
     fun openNotification() {
